@@ -60,11 +60,13 @@
     "webpack-merge": "4.1.1"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "babel-polyfill": "6.26.0",
     "copy-webpack-plugin": "^4.5.2",
     "kurtuba-client": "^1.0.4",
     "moment": "^2.20.1",
     "normalize.css": "7.0.0",
+    "page-icon": "^0.3.0",
     "prop-types": "^15.6.0",
     "react": "16.2.0",
     "react-dom": "16.2.0",
