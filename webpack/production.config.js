@@ -48,8 +48,8 @@ module.exports = {
         NODE_ENV: JSON.stringify('production')
       }
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      comments: false
-    })
+    // new webpack.optimize.UglifyJsPlugin({
+    //   comments: false
+    // })
   ]
 }

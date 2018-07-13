@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack/webpack.config.js --env development",
-    "build": "webpack --config webpack/webpack.config.js --env production",
+    "build": "webpack --watch --config webpack/webpack.config.js --env production",
     "serv": "static build"
   },
   "standard": {

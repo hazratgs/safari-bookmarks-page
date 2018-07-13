@@ -5,7 +5,10 @@ export default ({ items }) => {
   const elements = items.map((item, i) =>
     <Item key={i}>
       <Link href={item.url}>
-        <Icon src='' />
+        {item.img
+          ? <Icon src='' />
+          : <IconText>{item.textLogo}</IconText>
+        }
         <Title>{item.title}</Title>
       </Link>
     </Item>
@@ -30,13 +33,18 @@ const Item = styled.div`
   width: 82px;
   margin-bottom: 10px;
   text-align: center;
+  flex-basis: calc(100%/6);
 
-  @media (min-width: 820px) {
-    flex-basis: calc(100%/6);
+  @media (max-width: 1024px) {
+    flex-basis: calc(100%/5);
   }
 
-  @media (max-width: 800px) {
-    flex-basis: 20%;
+  @media (max-width: 767px) {
+    flex-basis: calc(100%/4);
+  }
+
+  @media (max-width: 540px) {
+    flex-basis: calc(100%/3);
   }
 `
 
@@ -49,7 +57,22 @@ const Icon = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 4px;
-  box-shadow: 0px 5px 14px -5px rgba(111, 116, 114, 0.7); 
+  box-shadow: 0px 2px 15px -5px #31313173; 
+`
+
+const IconText = styled.div`
+  width: 72px;
+  height: 72px;
+  margin: auto;
+  border-radius: 4px;
+  background-color: #DEDEDE;
+  box-shadow: 0px 2px 15px -5px #31313173;
+  color: #fff;
+  text-align: center;
+  line-height: 72px; 
+  font-size: 39px;
+  font-weight: 300;
+  text-transform: uppercase;
 `
 
 const Link = styled.a`
@@ -65,4 +88,5 @@ const Title = styled.p`
   margin: 9px auto;
   max-width: 92px;
   color: #333;
+  outline: none;
 `
