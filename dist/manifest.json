@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Safari bookmarks page",
+  "version": "0.0.1",
+  "description": "I really like the bookmarks in Safari, but my main Chrome browser is for many reasons, I really do not have enough of the same bookmarks, I bring to your attention the bookmarks that are the same as in Safari!",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": [
+    "bookmarks",
+    "chrome://favicon/"
+  ],
+  "update_url": "https://clients2.google.com/service/update2/crx"
+}

@@ -19,7 +19,7 @@ const common = {
     ]
   },
   output: {
-    path: resolve(__dirname, '../build'),
+    path: resolve(__dirname, '../dist'),
     filename: 'js/[name].js',
     publicPath: '/',
     chunkFilename: '[id].[chunkhash].js'
